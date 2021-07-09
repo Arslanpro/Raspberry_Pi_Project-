@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>User page</h1>
+
+<h2>Current users</h2>
+{% if persons %}
+<ul>
+    {% for person in persons %}
+    <li>
+        <p>{{ person.name }}</p>
+        <p>{{ person.age }}</p>
+        <p>{{ person.gender }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No users yet.</p>
+{% endif %}
+
+{% if form %}
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ form.age.label }} {{ form.age(size=20) }}
+    {{ form.gender.label }} {{ form.gender(size=20) }}
+    <input type="submit" value="Go">
+</form>
+{% endif %}
+
+</body>
+</html>

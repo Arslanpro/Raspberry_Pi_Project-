@@ -1,0 +1,5 @@
+pip install mysqlclient
+pip install pymysql
+download navicat preimum 15
+firstly, and run db_scripts.
+use anaconda3, please install all dependent packages.

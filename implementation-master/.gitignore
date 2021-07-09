@@ -1,0 +1,17 @@
+## .idea folder for PyCharm IDE settings
+.idea/
+
+## Virtual environment folder
+venv/
+ENV/
+
+## Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+## Web UI specifically excluded files
+instance/   # This folder includes all instance specific stuff, and also some sensitive iformation (keys etc.)
+!*_pub*     # Include files with _pub in it
+
+/wake_up_bright/web_ui/web_app/static/sb-admin/

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit note</title>
+</head>
+<body>
+    <h2>Edit note</h2>
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name(size=20) }}
+    {{ form.age.label }} {{ form.age(size=20) }}
+    {{ form.gender.label }} {{ form.gender(size=20) }}
+    <input type="submit" value="Go">
+</form>
+</body>
+</html>
